@@ -39,7 +39,8 @@ public class Flag: NSObject {
      Returns a styled flag according to the provided style
      - parameter style: Desired flag style
      */
-    public func image(style: FlagStyle) -> UIImage {
+	@available(iOS 10.0, *)
+	public func image(style: FlagStyle) -> UIImage {
         return originalImage.rendereredImage(size: style.size, action: { (context) in
             switch style {
             case .none:
